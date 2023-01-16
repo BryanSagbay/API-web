@@ -1,1 +1,457 @@
-<p>agregar-jugador works!</p>
+<div class=" container bg-light">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="cpu-fill" viewBox="0 0 16 16">
+    <path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"></path>
+    <path
+      d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5zm1 4.5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3A1.5 1.5 0 0 1 6.5 5z">
+    </path>
+  </symbol>
+  <symbol id="toggles2" viewBox="0 0 16 16">
+    <path d="M9.465 10H12a2 2 0 1 1 0 4H9.465c.34-.588.535-1.271.535-2 0-.729-.195-1.412-.535-2z"></path>
+    <path
+      d="M6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm.535-10a3.975 3.975 0 0 1-.409-1H4a1 1 0 0 1 0-2h2.126c.091-.355.23-.69.41-1H4a2 2 0 1 0 0 4h2.535z">
+    </path>
+    <path d="M14 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"></path>
+  </symbol>
+  <symbol id="tools" viewBox="0 0 16 16">
+    <path
+      d="M1 0L0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z">
+    </path>
+  </symbol>
+
+</svg>
+<div class="container">
+  <header class="d-flex justify-content-center py-3 mt-4">
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a aria-current="page">
+          <h3>ESTADISTICAS DE JUGADORES</h3>
+        </a></li>
+
+    </ul>
+  </header>
+</div>
+<div class="container px-4 py-2">
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="col d-flex align-items-start">
+      <div
+        class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+        <svg class="bi" width="1em" height="1.5em">
+          <use xlink:href="#toggles2"></use>
+        </svg>
+      </div>
+      <div>
+        <h3 class="fs-2">Agregar Jugador</h3>
+        <p>En esta sección nos permite realizar una interrección de verbo POST contra una API permitiendonos agregar
+          nuevos jugadores con sus respectivas estadisticas en la API.</p>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          AGREGAR JUGADOR
+        </button>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div
+        class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+        <svg class="bi" width="1em" height="1.5em">
+          <use xlink:href="#tools"></use>
+        </svg>
+      </div>
+      <div>
+        <h3 class="fs-2">Actualizar Jugador</h3>
+        <p>Esta sección nos permite realizar una interrección de verbo PUT contra la API permitiendonos actualizar las
+          estadisticas de cualquier jugador y este actualice a la API. </p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#SEGUNDO" >
+          EDITAR ESTADISTICAS
+        </button>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div
+        class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+        <svg class="bi" width="1em" height="1.5em">
+          <use xlink:href="#cpu-fill"></use>
+        </svg>
+      </div>
+      <div>
+        <h3 class="fs-2">Eliminar Registros</h3>
+        <p>Esta sección nos permite realizar una interrección de verbo DELETE contra la API permitiendonos eliminar
+          estadisticas de cualquier jugador y este realice el cambio en la API.</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#TERCERO">
+          ELIMINAR REGISTROS
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Jugador</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="actualizar()" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label for="firstName" class="form-label">Nombre</label>
+            <input type="text" [(ngModel)]="jugador.nombreJugador" class="form-control" id="firstName" placeholder=""
+              value="" required="" id="hero-name">
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="lastName" class="form-label">Apellido: </label>
+            <input type="text" [(ngModel)]="jugador.apellidoJugador" class="form-control" id="lastName" placeholder=""
+              value="" required="">
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <label for="firstName" class="form-label">Nacionalidad:</label>
+            <input type="text" [(ngModel)]="jugador.nacionalidadJugador" class="form-control" id="nacionality"
+              placeholder="" value="" required="">
+            <div class="invalid-feedback">
+              Valid first nacionality is required.
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <label for="firstName" class="form-label">Tamaño:</label>
+            <input type="text" [(ngModel)]="jugador.alturaJugador" class="form-control" id="height" placeholder=""
+              value="" required="">
+            <div class="invalid-feedback">
+              Valid heigth is required.
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <label for="lastName" class="form-label">Edad: </label>
+            <input type="text" [(ngModel)]="jugador.edadJugador" class="form-control" id="age" placeholder="" value=""
+              required="">
+            <div class="invalid-feedback">
+              Valid age is required.
+            </div>
+          </div>
+
+
+
+          <div class="col-12">
+            <label for="actual" class="form-label">Club Anterior: </label>
+            <input type="text" [(ngModel)]="jugador.clubAnteriorJugador" class="form-control" id="club" placeholder=""
+              required="">
+            <div class="invalid-feedback">
+              Valid club is required.
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="actual" class="form-label">Club Actual: </label>
+            <input type="text" [(ngModel)]="jugador.clubActualJugador" class="form-control" id="actual" placeholder="">
+            <div class="invalid-feedback">
+              Valid club is required.
+            </div>
+          </div>
+          <div class="col-4">
+            <label for="text" class="form-label">Posicion </label>
+            <input type="text" [(ngModel)]="jugador.posicionJugador" class="form-control" id="position" placeholder="">
+            <div class="invalid-feedback">
+              Valid position is required.
+            </div>
+          </div>
+          <div class="col-4">
+            <label for="valormercado" class="form-label">Valor: </label>
+            <div class="input-group has-validation ">
+              <span class="input-group-text">$</span>
+              <input type="text" [(ngModel)]="jugador.valorMercadoJugador" class="form-control" id="valor"
+                placeholder="" required="">
+              <div class="invalid-feedback">
+                Your value is required.
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <label for="salarioac" class="form-label">Salario: </label>
+            <div class="input-group has-validation ">
+              <span class="input-group-text">$</span>
+              <input type="text" [(ngModel)]="jugador.salarioJugador" class="form-control" id="salario" placeholder=""
+                required="">
+              <div class="invalid-feedback">
+                Your money is required.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="partidoj" class="form-label">Partidos Jugados: </label>
+            <input type="text" class="form-control" [(ngModel)]="jugador.partidosJugadosJugador" id="jugados"
+              placeholder="" required="">
+            <div class="invalid-feedback">
+              Please player a valid state.
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="zip" class="form-label">Goles: </label>
+            <input type="text" [(ngModel)]="jugador.golesJugador" class="form-control" id="zip" placeholder=""
+              required="">
+            <div class="invalid-feedback">
+              Goles code required.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="asistencias" class="form-label">Asistencias: </label>
+            <input type="text" [(ngModel)]="jugador.asistenciasJugador" class="form-control" id="asistenciasj"
+              placeholder="" required="">
+            <div class="invalid-feedback">
+              Asistencias code required.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="actualizar()">Close</button>
+        <button type="submit" (click)="guardarJugador()" (click)="actualizar()"class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL SEGUNDO EDITAR-->
+<div class="modal fade" id="SEGUNDO" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Editar</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered justify-content-center">
+          <thead class="table-secondary">
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Nacionalidad</th>
+              <th scope="col">Edad</th>
+              <th scope="col">Club Actual</th>
+              <th scope="col">Goles</th>
+              <th scope="col">Valor</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody class="table-primary">
+            <tr *ngFor="let jugador of jugadores">
+              <th scope="row">{{jugador.nombreJugador}}</th>
+              <td>{{jugador.apellidoJugador}}</td>
+              <th> {{jugador.nacionalidadJugador}}</th>
+              <td>{{jugador.edadJugador}}</td>
+              <td>{{jugador.clubActualJugador}}</td>
+              <td>{{jugador.golesJugador}}</td>
+              <td>{{jugador.valorMercadoJugador}}</td>
+              <td>
+                <button type="button" (click)="modificarJugador(jugador)"  class="btn btn-warning " data-bs-target="#hereda"
+                  data-bs-toggle="modal" [class.selected]="jugador=== jugador" (click)="onSelect(jugador) ">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path
+                      d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                    <path fill-rule="evenodd"
+                      d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--SEGUNDO MODEL PARA ACTUALIZAR-->
+<div class="modal fade" id="hereda" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+  tabindex="-1">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Actualizar</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label for="firstName" class="form-label">Nombre</label>
+            <input type="text" [(ngModel)]="jugador.nombreJugador" class="form-control" id="firstName" placeholder=""
+              value="" required="" id="hero-name">
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="lastName" class="form-label">Apellido: </label>
+            <input type="text" [(ngModel)]="jugador.apellidoJugador" class="form-control" id="lastName" placeholder=""
+              value="" required="">
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <label for="firstName" class="form-label">Nacionalidad:</label>
+            <input type="text" [(ngModel)]="jugador.nacionalidadJugador" class="form-control" id="nacionality"
+              placeholder="" value="" required="">
+            <div class="invalid-feedback">
+              Valid first nacionality is required.
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <label for="firstName" class="form-label">Tamaño:</label>
+            <input type="text" [(ngModel)]="jugador.alturaJugador" class="form-control" id="height" placeholder=""
+              value="" required="">
+            <div class="invalid-feedback">
+              Valid heigth is required.
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <label for="lastName" class="form-label">Edad: </label>
+            <input type="text" [(ngModel)]="jugador.edadJugador" class="form-control" id="age" placeholder="" value=""
+              required="">
+            <div class="invalid-feedback">
+              Valid age is required.
+            </div>
+          </div>
+
+
+
+          <div class="col-12">
+            <label for="actual" class="form-label">Club Anterior: </label>
+            <input type="text" [(ngModel)]="jugador.clubAnteriorJugador" class="form-control" id="club" placeholder=""
+              required="">
+            <div class="invalid-feedback">
+              Valid club is required.
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="actual" class="form-label">Club Actual: </label>
+            <input type="text" [(ngModel)]="jugador.clubActualJugador" class="form-control" id="actual" placeholder="">
+            <div class="invalid-feedback">
+              Valid club is required.
+            </div>
+          </div>
+          <div class="col-4">
+            <label for="text" class="form-label">Posicion </label>
+            <input type="text" [(ngModel)]="jugador.posicionJugador" class="form-control" id="position" placeholder="">
+            <div class="invalid-feedback">
+              Valid position is required.
+            </div>
+          </div>
+          <div class="col-4">
+            <label for="valormercado" class="form-label">Valor: </label>
+            <div class="input-group has-validation ">
+              <span class="input-group-text">$</span>
+              <input type="text" [(ngModel)]="jugador.valorMercadoJugador" class="form-control" id="valor"
+                placeholder="" required="">
+              <div class="invalid-feedback">
+                Your value is required.
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <label for="salarioac" class="form-label">Salario: </label>
+            <div class="input-group has-validation ">
+              <span class="input-group-text">$</span>
+              <input type="text" [(ngModel)]="jugador.salarioJugador" class="form-control" id="salario" placeholder=""
+                required="">
+              <div class="invalid-feedback">
+                Your money is required.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="partidoj" class="form-label">Partidos Jugados: </label>
+            <input type="text" class="form-control" [(ngModel)]="jugador.partidosJugadosJugador" id="jugados"
+              placeholder="" required="">
+            <div class="invalid-feedback">
+              Please player a valid state.
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="zip" class="form-label">Goles: </label>
+            <input type="text" [(ngModel)]="jugador.golesJugador" class="form-control" id="zip" placeholder=""
+              required="">
+            <div class="invalid-feedback">
+              Goles code required.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="asistencias" class="form-label">Asistencias: </label>
+            <input type="text" [(ngModel)]="jugador.asistenciasJugador" class="form-control" id="asistenciasj"
+              placeholder="" required="">
+            <div class="invalid-feedback">
+              Asistencias code required.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="actualizar()">Close</button>
+        <button (click)="guardarJugador()" (click)="actualizar()" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--TERCER MODAL PARA ELIMINAR-->
+<div class="modal fade" id="TERCERO" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">ELIMINAR REGISTROS</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="actualizar()" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered justify-content-center">
+          <thead class="table-secondary">
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Nacionalidad</th>
+              <th scope="col">Edad</th>
+              <th scope="col">Club Actual</th>
+              <th scope="col">Goles</th>
+              <th scope="col">Valor</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody class="table-primary">
+            <tr *ngFor="let jugador of jugadores">
+              <td>{{jugador.nombreJugador}}</td>
+              <td>{{jugador.apellidoJugador}}</td>
+              <td>{{jugador.nacionalidadJugador}}</td>
+              <td>{{jugador.edadJugador}}</td>
+              <td>{{jugador.clubActualJugador}}</td>
+              <td>{{jugador.golesJugador}}</td>
+              <td>{{jugador.valorMercadoJugador}}</td>
+              <td>
+                <button type="button" class="btn btn-danger "  (click)="eliminarJugador(jugador)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-trash3-fill" viewBox="0 1 16 16">
+                    <path
+                      d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>

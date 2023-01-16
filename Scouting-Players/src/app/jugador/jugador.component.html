@@ -5,14 +5,14 @@
         src="https://upload.wikimedia.org/wikipedia/commons/2/22/Football_of_Ecuador_-_Liga_Pro_logo_%28mini%29.svg"
         alt="" width="72" height="57">
       <h2>JUGADORES DE LA LIGA PRO ECUADRO</h2>
-      <p class="lead">A continuacion se detalle los jugadores que se encuentran jugando en la liga local y de
+      <p class="lead">A continuación, se detalle los jugadores que se encuentran jugando en la liga local y de
         nacionalidad ecuatoriana, permitiendonos observar a detalle sus estadisticas generales.</p>
     </div>
     <div class="col-md-auto" *ngFor="let jugador of jugadores">
 
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col-auto d-none d-lg-block mt-3 px-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="160px" height="170px" fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
+          <svg xmlns="http://www.w3.org/2000/svg" width="180px" height="190px" fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
             <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
           </svg>  </div>
@@ -20,15 +20,15 @@
         <div class="col p-4 d-flex flex-column position-static">
          <div class="row" >
           <div class="col-7">
-          <strong class="d-inline-block mb-2 text-success"> {{jugador.nombreJugador}}&nbsp; {{jugador.apellidoJugador}}</strong>
-          <h5 class="mb-0">Nacionalidad: {{jugador.nacionalidadJugador}}</h5>
+          <strong class="d-inline-block mb-2 text-success"><h4> {{jugador.nombreJugador}}&nbsp; {{jugador.apellidoJugador}}</h4></strong>
+          <div class="mb-0 text-muted"><b> Nacionalidad:</b> {{jugador.nacionalidadJugador}} <img src="https://tmssl.akamaized.net/images/flagge/tiny/44.png?lm=1520611569" title="Ecuador" alt="Ecuador"  height="12rem" class="flaggenrahmen"></div>
           <div class="mb-0 text-muted"><b>Edad:</b>  {{jugador.edadJugador}} &nbsp;&nbsp;&nbsp; <b>Posición: </b> {{jugador.posicionJugador}}</div>
           <div class="mb-1 text-muted"><b>Tamaño: </b> {{jugador.alturaJugador}}</div>
           <div class="mb-1 text-muted"><b>Club Anterior: </b> {{jugador.clubAnteriorJugador}}</div>
           <div class="mb-1 text-muted"><b>Club Actual: </b> {{jugador.clubActualJugador}}</div>
         </div>
         <div class="col-5">
-          <strong class="d-inline-block mb-2 text-success"></strong>
+          <strong class="d-inline-block mb-2  text-primary"><br></strong>
           <div class="mb-1 text-muted"><b>Goles: </b>{{jugador.golesJugador}} </div>
           <div class="mb-1 text-muted"><b>Asistencias: </b>{{jugador.asistenciasJugador}} </div>
           <div class="mb-1 text-muted"><b>Partidos jugados: </b>{{jugador.partidosJugadosJugador}} </div>
@@ -44,4 +44,5 @@
     </div>
 
   </main>
+
 </div>
