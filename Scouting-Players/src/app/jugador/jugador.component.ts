@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Jugador } from '../model/jugador';
+import { Jugadores } from '../model/jugador';
 import { JugadorService } from '../services/jugador.service';
 
 @Component({
@@ -7,49 +7,59 @@ import { JugadorService } from '../services/jugador.service';
   templateUrl: './jugador.component.html',
   styleUrls: ['./jugador.component.css']
 })
-export class JugadorComponentn implements OnInit {
-    jugador: Jugador= new Jugador();
-    bandera: boolean=false;
-    jugadores: Jugador[] = [];
- constructor(private jugadorService:JugadorService){
+export class JugadorComponent implements OnInit {
+  jugador: Jugadores= new Jugadores();
+  bandera: boolean=false;
+  jugadores: Jugadores[] = [];
+constructor(private jugadorService:JugadorService){
 
- }
- ngOnInit(){
- this.jugadorService.jugadores().subscribe( (data:Jugador[]) => {
-   this.jugadores = data
- })
- this.jugador=new Jugador();
- }
- guardarJugador() {
-  //guardar jugador
-   if (this.bandera == false) {
-     this.jugadorService.guardarJugador(this.jugador).subscribe( (data:Jugador) => {
-       this.jugadores.push(data)
-       this.jugador = new Jugador();
-     });
-
-
-   } else {
-
-     //actualizar jugador
-     this.jugadorService.actualizarJugador(this.jugador).subscribe( (data:Jugador) => {
-       this.jugadores.push(data)
-       this.bandera = false
-
-     });
-     this.jugador = new Jugador();
-   }
-
- }
-//eliminar jugador
- eliminarJugador(jugador: Jugador) {
-   this.jugadorService.eliminarJugador(jugador.id).subscribe( (data:Jugador) => {
-     this.jugadores = this.jugadores.filter(j => j !== jugador)
-   });
- }
-// editar jugador
-   modificarJugador(j:Jugador){
-     this.jugador = j
-     this.bandera= true
-   }
 }
+ngOnInit(){
+this.jugadorService.jugadores().subscribe( (data:Jugadores[]) => {
+ this.jugadores = data
+})
+this.jugador=new Jugadores();
+}
+MostrarDatos(){
+  if(this.bandera==false){
+  this.jugadorService.jugadores().subscribe( (data:Jugadores[]) => {
+    this.jugadores = data
+  })
+  this.jugador=new Jugadores();
+}}
+
+
+guardarJugador() {
+  if (this.bandera == false) {
+    this.jugadorService.guardarJugador(this.jugador).subscribe( (data:Jugadores) => {
+      this.jugadores.push(data)
+      this.jugador = new Jugadores();
+    });
+
+
+  } else {
+
+
+    this.jugadorService.actualizarJugador(this.jugador).subscribe( (data:Jugadores) => {
+      this.jugadores.push(data)
+      this.bandera = false
+
+    });
+    this.jugador = new Jugadores();
+  }
+
+ }
+
+ eliminarJugador(jugador: Jugadores) {
+  this.jugadorService.eliminarJugador(jugador.id).subscribe( (data:Jugadores) => {
+    this.jugadores = this.jugadores.filter(j => j !== jugador)
+  });
+ }
+
+  modificarJugador(j:Jugadores){
+    this.jugador = j
+    this.bandera= true
+  }
+
+}
+
