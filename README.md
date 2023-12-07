@@ -19,11 +19,8 @@ Este es un proyecto en Angular 5 que muestra información detallada sobre los ju
 - ANGULAR
 - BOOTSTRAP
 
+
 <br>
-
-
-
-
 
 
 
