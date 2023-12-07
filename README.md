@@ -39,12 +39,15 @@ $ npm install -g @angular/cli
 $ git clone https://github.com/BryanSagbay/API-web.git
 ```
 4. Configuración de dependencias y scripts:
+   
 En el archivo package.json, puedes encontrar las dependencias instaladas y los    scripts configurados para ejecutar tareas como la compilación, prueba, inicio del    servidor de desarrollo, entre otros.
 
-5. Configuración de entorno:
+6. Configuración de entorno:
+   
 El archivo environment.ts y environment.prod.ts en la carpeta environments se            utiliza para configurar variables de entorno como las URLs de las APIs, claves de        acceso, entre otros
 
-6. Configuración de servicios y componentes:
+8. Configuración de servicios y componentes:
+   
 Los servicios se utilizan para realizar llamadas a API o lógica de negocio, mientras que los componentes manejan la presentación y la lógica de la interfaz de usuario. Puedes crear servicios y componentes usando Angular CLI:
 ``` bash
 $ ng generate service nombre-del-servicio 
