@@ -13,6 +13,7 @@ Este es un proyecto en Angular 5 que muestra información detallada sobre los ju
 <hr> 
 
 <br>
+
 > ### 1. Tecnologías Utilizadas 
 - HTML
 - ANGULAR
